@@ -1,3 +1,4 @@
+//Actual server. Our aws instance would be here.
 document.write(process.version);
 var net = require('net');
 var client = net.connect({port: 8080}, function() {
