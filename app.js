@@ -19,9 +19,9 @@ module.exports = require;
 
 //Take info from index.html and displays on DOM (Electron).
 
-const electron = require('electron');
-const {app} = require('electron');
-const {BrowserWindow} = require('electron');
+// const electron = require('electron');
+// const {app} = require('electron');
+// const {BrowserWindow} = require('electron');
 
 
 // electron.app.on('ready', function () {  
