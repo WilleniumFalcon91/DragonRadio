@@ -33,10 +33,14 @@ const {BrowserWindow} = require('electron');
 
 //Test
 const getTopTracks = $.get('https://api.napster.com/v2.1/tracks/top?apikey=NmYxOWEyYmUtZDc0MC00NWIyLWIxYWEtNjg4YmE5YmU2YTg4');
+var sort = [] ;
 
-getTopTracks
-  .then((response) => {
-    $tracks.html(tracksTemplate(response));
+  getTopTracks.then(function (response) {
+    // $tracks.html(tracksTemplate(response))
+    sort = response;
+    console.log(response);
   });
-
-console.log(getTopTracks);
+// To sort through the API in devtools use:
+//  sort["tracks"][4]["explicit"]
+//  sort[name of the array][number of the object]
+// [what you wanna see]
