@@ -11,10 +11,12 @@
   "license": "ISC",
   "devDependencies": {
     "dotenv": "^4.0.0",
-    "electron-prebuilt": "^1.4.13"
+    "electron-prebuilt": "^1.4.13",
+    "hbs": "^4.0.1"
   },
   "dependencies": {
     "electron": "^1.7.5",
+    "electron-handlebars": "^2.0.0",
     "pg-promise": "^6.4.0"
   }
 }
