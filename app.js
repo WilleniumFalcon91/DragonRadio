@@ -1,3 +1,4 @@
+
 //Actual server. Our aws instance would be here.
 document.write(process.version);
 var net = require('net');
@@ -47,6 +48,7 @@ var sort = [] ;
 
 
 //database config 
+//I'm getting an error here. We need to look at this.
 require('dotenv').config()
 const pg = require('pg-promise')();
 const dbConfig = {
@@ -57,6 +59,7 @@ const dbConfig = {
 
 module.exports = pg(dbConfig);
 
+//Will's database.
 const db = require('./db');
 
 
@@ -100,4 +103,6 @@ class User {
 }
 
 module.exports = User;
+//End//////////////////////////
+
 
