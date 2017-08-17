@@ -20,19 +20,19 @@ module.exports = require;
 
 //Test
 
-const tracksTemplateSource = document.getElementById('tracks-template').innerHTML;
-const Handlebars = require('Handlebars');
-const tracksTemplate = Handlebars.compile(tracksTemplateSource);
+// const tracksTemplateSource = document.getElementById('tracks-template').innerHTML;
+// const Handlebars = require('Handlebars');
+// const tracksTemplate = Handlebars.compile(tracksTemplateSource);
 
-const $tracks = $('#tracks-container');
+// const $tracks = $('#tracks-container');
 
-const getTopTracks = $.get('https://api.napster.com/v2.1/tracks/top?apikey=NmYxOWEyYmUtZDc0MC00NWIyLWIxYWEtNjg4YmE5YmU2YTg4');
+// const getTopTracks = $.get('https://api.napster.com/v2.1/tracks/top?apikey=NmYxOWEyYmUtZDc0MC00NWIyLWIxYWEtNjg4YmE5YmU2YTg4');
 
-getTopTracks
-  .then((response) => {
-    $tracks.html(tracksTemplate(response));
-    console.log(response);
-  });
+// getTopTracks
+//   .then((response) => {
+//     $tracks.html(tracksTemplate(response));
+//     console.log(response);
+//   });
 // const getTopTracks = $.get('https://api.napster.com/v2.1/tracks/top?apikey=NmYxOWEyYmUtZDc0MC00NWIyLWIxYWEtNjg4YmE5YmU2YTg4');
 // var sort = [] ;
 
@@ -45,6 +45,60 @@ getTopTracks
 //  sort["tracks"][4]["explicit"]
 //  sort[name of the array][number of the object]
 // [what you wanna see]
+
+const playlistTemplateSource = document.getElementById('playlist-template').innerHTML;
+const Handlebars = require('Handlebars');
+const playlistTemplate = Handlebars.compile(playlistTemplateSource);
+
+const tracksTemplateSource = document.getElementById('tracks-template').innerHTML;
+const tracksTemplate = Handlebars.compile(tracksTemplateSource);
+
+const $playlist = $('#playlist-container');
+const $tracks = $('#tracks-container');
+const $mainTitle = $('.header');
+const $backButton = $('.back-button');
+
+const getTopPlaylists = $.get('https://api.napster.com/v2.0/playlists?apikey=NmYxOWEyYmUtZDc0MC00NWIyLWIxYWEtNjg4YmE5YmU2YTg4');
+
+function getPlaylistTracks(id) {
+  return $.get('https://api.napster.com/v2.0/playlists/' + id + '/tracks?apikey=NmYxOWEyYmUtZDc0MC00NWIyLWIxYWEtNjg4YmE5YmU2YTg4&limit=200');
+}
+
+$backButton.click(() => {
+	$playlist.show();
+  $tracks.hide();
+  $mainTitle.text('Top Playlists');
+  $backButton.hide();
+});
+
+$backButton.hide(); // Initally hide back button.
+
+function changeToTracks(playlistName) {
+	$mainTitle.text(playlistName);
+  $playlist.hide();
+	$tracks.show();
+  $backButton.show();
+  
+  return renderTracks;
+}
+
+function renderTracks(response) {
+  $tracks.html(tracksTemplate(response));
+}
+
+getTopPlaylists
+  .then((response) => {
+    $playlist.html(playlistTemplate(response));
+    addPlaylistListener();
+  });
+
+function addPlaylistListener() {
+  $('.cover').on('click', (e) => {
+    const $playlist = $(e.target);
+    getPlaylistTracks($playlist.data('playlistId'))
+      .then(changeToTracks($playlist.data('playlistName')));
+  });
+}
 
 
 //database config 
