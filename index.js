@@ -29,7 +29,4 @@ app.on('ready', () => {
   });
 });
 
-function goToTopTen () {
-    mainWindow.loadURL(`file://${__dirname}/views/topten.hbs`);
-}
-module.exports = goToTopTen;
+module.exports = require;
