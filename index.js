@@ -14,11 +14,11 @@ const rq = require('electron-handlebars');
 // const { app, BrowserWindow } = require('electron');
 // const rq = require('require-electron');
  
-require('electron-handlebars')({
-  // Template bindings go here! 
-  title: 'Hello, World!',
-  body: 'The quick brown fox jumps over the lazy dog.',
-});
+// require('electron-handlebars')({
+//   // Template bindings go here! 
+//   title: 'Hello, World!',
+//   body: 'The quick brown fox jumps over the lazy dog.',
+// });
  
 // let mainWindow = null;
  
