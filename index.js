@@ -14,7 +14,7 @@ exp.set('view engine', 'hbs');
 
 // exp.use('/', index);
 // exp.use('/topten', topten);
-
+let mainWindow;
  
 app.on('ready', () => {
   mainWindow = new BrowserWindow({
@@ -29,5 +29,7 @@ app.on('ready', () => {
   });
 });
 
-
-module.exports = require;
+function goToTopTen () {
+    mainWindow.loadURL(`file://${__dirname}/views/topten.hbs`);
+}
+module.exports = goToTopTen;

@@ -58,6 +58,8 @@ const $tracks = $('#tracks-container');
 const $mainTitle = $('.header');
 const $backButton = $('.back-button');
 
+
+
 const getTopPlaylists = $.get('https://api.napster.com/v2.0/playlists?apikey=NmYxOWEyYmUtZDc0MC00NWIyLWIxYWEtNjg4YmE5YmU2YTg4');
 
 function getPlaylistTracks(id) {

@@ -36,7 +36,9 @@
   text-align: center;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
-
+body{
+  background-color: firebrick;
+}
 .back-button {
       /* Remove all decorations to look like normal text */
     background: none;
@@ -54,14 +56,14 @@
 }
 </style>
   
-<h1> 🔥 Dragon Radio 🔥</h1>
+<h1> 🔥 Janky Dragon Radio 🔥</h1>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 
  <div class="container">
   <div class="header">
     Top Playlists
-    <a href="/views/topten"><button>Go To Top Ten</button></a>
+    <button><a href="../views/topten.hbs">Go To Top Ten</a></button>
   </div>
   <div class="back-button"><a>Back to playlists</a></div>
   <div id="playlist-container"></div>
