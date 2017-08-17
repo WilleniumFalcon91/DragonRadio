@@ -1,5 +1,27 @@
 <h1> 🔥 Dragon Radio 🔥</h1>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+<div class="container">
+  <div class="header">
+    Top Tracks
+  </div>
+ 
+  <div id="tracks-container"></div>
+</div>
+
+<script id="tracks-template" type="text/x-handlebars-template">
+  {{#each tracks}}
+  <div data-track-id="{{id}}" style="background-image:url(http://direct.rhapsody.com/imageserver/v2/albums/{{albumId}}/images/300x300.jpg)" class="cover">
+  <div class=content-name>{{name}}</div>
+  <audio controls class= "audio">
+    <source src="{{previewURL}}" type="audio/mpeg">
+  </audio>
+  </div>
+  {{/each}}
+</script>
+
+
 <div class="container" id="login">
     <h1 id="heading">View User Data</h1>
     <div id="login-section">
@@ -25,4 +47,4 @@
     </dl>
 </script>
 
-<script> require('app.js')</script>
+<script> require('../app.js');</script>
