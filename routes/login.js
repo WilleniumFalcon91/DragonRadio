@@ -8,6 +8,7 @@ const $loginButton = $('#btn-login');
 const $loginSection = $('#login-section');
 const $result = $('#result');
 const templateSource = document.getElementById('result-template').innerHTML
+const Handlebars = require('Handlebars');
 const resultsTemplate = Handlebars.compile(templateSource);
 
 const napsterAPI = 'https://api.napster.com';
