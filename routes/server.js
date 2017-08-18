@@ -1,18 +1,18 @@
 //Actual server. Our aws instance would be here.
-document.write(process.version);
-var net = require('net');
-var client = net.connect({port: 8080}, function() {
-   console.log('Connection established!');  
-    });
+// document.write(process.version);
+// var net = require('net');
+// var client = net.connect({port: 8080}, function() {
+//    console.log('Connection established!');  
+//     });
 
-client.on('data', function(data) {
-   document.write(data.toString());
-   client.end();
-    });
+// client.on('data', function(data) {
+//    document.write(data.toString());
+//    client.end();
+//     });
 
-client.on('end', function() { 
-   console.log('Disconnected :(');
-    });
+// client.on('end', function() { 
+//    console.log('Disconnected :(');
+//     });
 
 
-module.exports = require;
+// module.exports = require;
