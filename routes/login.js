@@ -1,5 +1,8 @@
 //Oauth logic 
 
+const remote = require('electron').remote;
+const BrowserWindow = remote.BrowserWindow;
+
 const width = 700;
 const height = 400;
 const left = (screen.width / 2) - (width / 2);
@@ -15,7 +18,7 @@ const napsterAPI = 'https://api.napster.com';
 const APIKEY = 'NmYxOWEyYmUtZDc0MC00NWIyLWIxYWEtNjg4YmE5YmU2YTg4';
 const oauthURL = `${napsterAPI}/oauth/authorize?client_id=${APIKEY}&response_type=code`;
 
-const REDIRECT_URI = 'https://developer.napster.com/jsfiddle_proxy';
+const REDIRECT_URI = 'http://localhost';
 
 function fetchUserData (accessToken) {
 	return $.ajax({
@@ -26,7 +29,9 @@ function fetchUserData (accessToken) {
   });	
 }
 
-function login() {
+function login(e) {
+  
+  debugger;
 	window.addEventListener('message',(event) => {
     var hash = JSON.parse(event.data);
     if (hash.type === 'access_token') {
@@ -39,13 +44,14 @@ function login() {
     }
   }, false);
  
-	window.open(
-  	`${oauthURL}&redirect_uri=${REDIRECT_URI}`,
-  	'Napster',
-    `menubar=no,location=no,resizable=no,scrollbars=no,status=no,width=${width},height=${height},top=${top}, left=${left}`
-  );
+  var openURL = `${oauthURL}&redirect_uri=${REDIRECT_URI}`;
+  // console.log();
+
+var win = new BrowserWindow({width: 800, height: 600, webPreferences:{"nodeIntegration": false}});
+win.loadURL(openURL);
 }
 
-$loginButton.click(() => {
- login();
+$loginButton.click((e) => {
+ login(e);
+ 
 })
