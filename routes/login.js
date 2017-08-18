@@ -18,7 +18,7 @@ const napsterAPI = 'https://api.napster.com';
 const APIKEY = 'NmYxOWEyYmUtZDc0MC00NWIyLWIxYWEtNjg4YmE5YmU2YTg4';
 const oauthURL = `${napsterAPI}/oauth/authorize?client_id=${APIKEY}&response_type=code`;
 
-const REDIRECT_URI = 'http://localhost';
+const REDIRECT_URI = 'http://localhost:5000/auth/callback';
 
 function fetchUserData (accessToken) {
 	return $.ajax({
