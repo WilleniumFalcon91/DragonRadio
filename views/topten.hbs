@@ -1,14 +1,81 @@
+<style>
+  header {
+  font-size: 50px;
+  text-align: center;
+  
+}
+.track-cover {
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+  display: inline-block;
+}
+
+.cover {
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+  display: inline-block;
+  margin: 10px;
+  float: left;
+  border: 3px solid black; 
+  position: relative;
+}
+
+.audio {
+    position: absolute;
+    bottom: 0;
+}
+.cover:hover {
+  cursor: pointer;
+}
+
+.content-name{
+  color: white;
+  font-size: 25px;
+  text-align: center;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+body{
+  background-color: firebrick;
+}
+.back-button {
+      /* Remove all decorations to look like normal text */
+    background: none;
+    border: none;
+    display: inline;
+    font: inherit;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    outline-offset: 0;
+    /* Additional styles to look like a link */
+    color: blue;
+    cursor: pointer;
+    text-decoration: underline;
+}
+</style>
+  
 <h1> 🔥 Janky Dragon Radio 🔥</h1>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 
-<div class="container">
+ <div class="container">
   <div class="header">
     Top Tracks
+    <button><a href="../views/index.hbs">Go Back</a></button>
   </div>
- 
+  {{!-- <div class="back-button"><a>Back to playlists</a></div> --}}
+  <div id="playlist-container"></div>
   <div id="tracks-container"></div>
 </div>
+
+<script id="playlist-template" type="text/x-handlebars-template">
+  {{#each playlists}}
+  <div style="background-image:url({{images.0.url}})" data-playlist-id="{{id}}" data-playlist-name="{{name}}" class="cover">
+  <div class="content-name">{{name}}</div></div>
+  {{/each}}
+</script>
 
 <script id="tracks-template" type="text/x-handlebars-template">
   {{#each tracks}}
@@ -19,5 +86,31 @@
   </audio>
   </div>
   {{/each}}
+</script>
 
-<script> require('../toptracks.js');</script>
+<div class="container" id="login">
+    <h1 id="heading">View User Data</h1>
+    <div id="login-section">
+      <p>Log in with your Napster account and this demo will display information about you.</p>
+      <button class="btn btn-primary signin" id="btn-login">Login</button>
+    </div>
+    <div id="result"></div>
+</div>
+
+<script id="result-template" type="text/x-handlebars-template">
+    <dl>
+      <img src="{{avatar}}">
+      <dt>User Name</dt>
+      <dd>{{realName}}</dd>
+      <dt>Display Name</dt>
+      <dd>{{screenName}}</dd>
+      <dt>Followers</dt>
+      <dd>{{followerCount}}</dd>
+      <dt>Profile</dt>
+      <dd><a href="https://app.napster.com/members/{{screenName}}" target="_blank">https://app.napster.com/members/{{screenName}}</a></dd>
+      <dt>Napster ID</dt>
+      <dd>{{id}}</dd>
+    </dl>
+</script>
+
+<script> require('../routes/toptracks.js');</script>
