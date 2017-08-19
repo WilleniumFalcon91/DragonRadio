@@ -29,16 +29,7 @@ app.on('ready', () => {
     mainWindow.show();
     mainWindow.focus();
   });
-  chatroom = new BrowserWindow({
-    show: false,
-    width: 400,
-    height: 900,
-  });
-  chatroom.loadURL('https://www.google.com/');
-  chatroom.webContents.on('did-finish-load', () => {
-    chatroom.show();
-    chatroom.focus();
-  })
+    
 });
 
 
