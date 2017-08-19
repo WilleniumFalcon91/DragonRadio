@@ -36,7 +36,7 @@ header {
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 body{
-  background-color: firebrick;
+  background-color: #0099ff;
 }
 .back-button {
       /* Remove all decorations to look like normal text */
