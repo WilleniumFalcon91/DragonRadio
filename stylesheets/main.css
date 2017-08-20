@@ -78,3 +78,7 @@ body{
     cursor: pointer;
     text-decoration: underline;
 }
+
+#foo {
+  float: right;
+}
