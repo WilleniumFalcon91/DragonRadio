@@ -16,7 +16,7 @@ exp.set('view engine', 'hbs');
 // exp.use('/', index);
 // exp.use('/topten', topten);
 let mainWindow;
-let chatroom;
+// let chatroom;
  
 app.on('ready', () => {
   mainWindow = new BrowserWindow({
@@ -31,7 +31,5 @@ app.on('ready', () => {
   });
     
 });
-
-
 
 module.exports = require;
