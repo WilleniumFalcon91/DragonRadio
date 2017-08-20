@@ -1,3 +1,13 @@
+h1 {
+  font-family: 'Pacifico', cursive;
+  color: white;
+  text-align: center;
+  font-size: 5em;
+  margin-top: 2rem;
+  font-weight: 305;  
+  text-shadow: 5px 5px #2193b0;
+}
+
 header {
   font-size: 50px;
   text-align: center;
@@ -36,8 +46,23 @@ header {
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 body{
-  background-color: #0099ff;
+  background: #24c6dc
+
+; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left top, #24c6dc
+
+, #514a9d); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, #24c6dc
+
+, #514a9d); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, #24c6dc
+
+, #514a9d); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, #24c6dc
+
+, #514a9d); /* Standard syntax */
 }
+
 .back-button {
       /* Remove all decorations to look like normal text */
     background: none;
