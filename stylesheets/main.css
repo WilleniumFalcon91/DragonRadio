@@ -1,8 +1,13 @@
+/* .container-header {
+  height: 10rem;
+} */
+
 h1 {
   font-family: 'Pacifico', cursive;
   color: white;
   text-align: center;
-  font-size: 5em;
+  font-size: 6em;
+  margin-top: 2rem;
   margin-bottom: 0rem;
   font-weight: 305;  
   text-shadow: 5px 5px #2093B0;
@@ -102,23 +107,25 @@ li {
 }
 
 .container {
-  /* border: 1px solid yellow;  */
-  width: 65%;
+  /* border: 1px solid yellow;   */
+  width: 63%;
   float: left;
-  margin-left: 35px;
+  /* margin-left: 35px; */
 }
 
 .chatroom {
-  width: 30%;
+  width: 35%;
   display: flex;
   float: right;
-  margin-top: 10px;
-  /* border: 1px  solid red;  */
+  margin-right: 1rem;
+   margin-top: 9px;
+   /* border: 1px  solid red;   */
 } 
 
 #foo {
 height: 60rem;
-width: 20rem;
+width: 40rem;
+ /* border: 1px  solid red;   */
 }
 
 .listen{

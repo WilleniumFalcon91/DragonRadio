@@ -22,7 +22,7 @@ app.on('ready', () => {
   mainWindow = new BrowserWindow({
     show: false,
     width: 1250,
-    height: 900,
+    height: 1000,
   });
   mainWindow.loadURL(`file://${__dirname}/views/index.hbs`);
   mainWindow.webContents.on('did-finish-load', () => {
