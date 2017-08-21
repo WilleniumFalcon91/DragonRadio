@@ -1,21 +1,37 @@
 <div class = "container-header">
   <h1> YaHerd? </h1>
-  <h2>Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</h2>
-
+  
 
 <link rel="stylesheet" type="text/css" href="../stylesheets/main.css">
 <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
 <script type="text/javascript" src="http://builds.handlebarsjs.com.s3.amazonaws.com/handlebars.min-latest.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 
+<header>
+	<span class = "listen">LISTEN WHILE YOU CHAT</span>
+  <button class="hamburger">&#9776;</button>
+  <button class="cross">&#735;</button>
+</header>
+
+<div class="menu">
+  <ul>
+    <a href="../views/topten.hbs"><li>TOP TEN</li></a>
+    <a href="#"><li>LINK TWO</li></a>
+    <a href="#"><li>LINK THREE</li></a>
+    <a href="#"><li>LINK FOUR</li></a>
+    <a href="#"><li>LINK FIVE</li></a>
+  </ul>
+</div>
+
 
 <div class="container">
   <div class="header">
     Top Playlists
-    <button><a href="../views/topten.hbs">Go To Top Ten</a></button>
   </div>
   <div class="back-button"><a>Back to playlists</a></div>
-  <div id="playlist-container"></div>
+  <div id="playlist-container">
+    
+  </div>
   <div id="tracks-container"></div>
 </div>
 
@@ -36,13 +52,14 @@
   </div>
   {{/each}}
 </script>
+</div>
 
 
 
 <div class="chatroom"> 
   <webview id="foo" src="https://www.github.com/" style="display:inline-flex; width:640px; height:480px"></webview>
 </div>
-</div>
+
 <script> require('../routes/app.js');</script>
 
 
