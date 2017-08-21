@@ -21,8 +21,8 @@ let mainWindow;
 app.on('ready', () => {
   mainWindow = new BrowserWindow({
     show: false,
-    width: 900,
-    height: 800,
+    width: 1250,
+    height: 900,
   });
   mainWindow.loadURL(`file://${__dirname}/views/index.hbs`);
   mainWindow.webContents.on('did-finish-load', () => {

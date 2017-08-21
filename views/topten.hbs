@@ -1,20 +1,36 @@
+<div class = "container-header">
+  <h1> YaHerd?</h1>
 
-<h1> YaHerd?</h1>
-
-<link rel="stylesheet" type="text/css" href="../stylesheets/main.css">
+<link rel="stylesheet" type="text/css" href="../stylesheets/topten.css">
 <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
 <script type="text/javascript" src="http://builds.handlebarsjs.com.s3.amazonaws.com/handlebars.min-latest.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 
- <div class="container">
-  <div class="header">
-    Top Tracks
-    <button><a href="../views/index.hbs">Go Back</a></button>
-  </div>
-  {{!-- <div class="back-button"><a>Back to playlists</a></div> --}}
+<header>
+	<span class = "listen">TUNES WORTH TALKIN' ABOUT</span>
+  <button class="hamburger">&#9776;</button>
+  <button class="cross">&#735;</button>
+</header>
+
+<div class="menu2">
+  <ul>
+    <a href="../views/index.hbs"><li>HOME</li></a>
+    <a href="#"><li>LINK TWO</li></a>
+    <a href="#"><li>LINK THREE</li></a>
+    <a href="#"><li>LINK FOUR</li></a>
+    <a href="#"><li>LINK FIVE</li></a>
+  </ul>
+</div>
+
+<div class="header">
+  Top Tracks
+</div>
+
+<div class="container">
   <div id="playlist-container"></div>
   <div id="tracks-container"></div>
 </div>
+
 
 <script id="playlist-template" type="text/x-handlebars-template">
   {{#each playlists}}
@@ -33,6 +49,11 @@
   </div>
   {{/each}}
 </script>
+</div>
+
+<div class="chatroom"> 
+  <webview id="foo" src="https://www.github.com/"></webview>
+</div>
 
 <script> require('../routes/toptracks.js');</script>
 
