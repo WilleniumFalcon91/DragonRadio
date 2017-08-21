@@ -186,6 +186,14 @@ header{
   margin:0 auto;
 }
 
+.sheep {
+  width: 10rem;
+  height: 10rem;
+  float: right;
+  margin-top: 6rem;
+  margin-right: 5rem;
+}
+
 
 header{display:inline-block; font-size:12px;}
 span{padding-left:20px;}

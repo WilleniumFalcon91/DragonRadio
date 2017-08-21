@@ -8,7 +8,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 
 <header>
-	<span class = "listen">TUNES WORTH TALKIN' ABOUT</span>
+	<span class = "listen">TUNES TO TALK ABOUT</span>
   <button class="hamburger">&#9776;</button>
   <button class="cross">&#735;</button>
 </header>
@@ -37,7 +37,9 @@
   <div style="background-image:url({{images.0.url}})" data-playlist-id="{{id}}" data-playlist-name="{{name}}" class="cover">
   <div class="content-name">{{name}}</div></div>
   {{/each}}
+  <img src="http://i.imgur.com/vx7ikxd.png" alt="sheep" class="sheep" />
 </script>
+
 
 <script id="tracks-template" type="text/x-handlebars-template">
   {{#each tracks}}
@@ -48,6 +50,7 @@
   </audio>
   </div>
   {{/each}}
+  <img src="http://i.imgur.com/vx7ikxd.png" alt="sheep" class="sheep" />
 </script>
 </div>
 
@@ -56,7 +59,6 @@
 <div class="chatroom"> 
   <webview id="foo" src="https://www.github.com/"></webview>
 </div>
-
 
 <script> require('../routes/app.js');</script>
 
