@@ -160,7 +160,7 @@ header{
   font-weight:bold;
   cursor:pointer;
   outline:none;
-  z-index:10000000000000;
+  z-index:10;
 }
 .cross{
   background:none;
@@ -175,9 +175,9 @@ header{
   font-weight:bold;
   cursor:pointer;
   outline:none;
-  z-index:10000000000000;
+  z-index:10;
 }
-.menu{z-index:1000000; font-weight:bold; font-size:0.8em; width:100%; background:#f1f1f1;  position:absolute; text-align:center; font-size:12px;}
+.menu{z-index:10; font-weight:bold; font-size:0.8em; width:100%; background:#f1f1f1;  position:absolute; text-align:center; font-size:12px;}
 .menu ul {margin: 0; padding: 0; list-style-type: none; list-style-image: none;}
 .menu li {display: block;   padding:15px 0 15px 0; border-bottom:#dddddd 1px solid;}
 .menu li:hover{display: block;    background:#ffffff; padding:15px 0 15px 0; border-bottom:#dddddd 1px solid;}
@@ -187,7 +187,7 @@ header{
 .menu a:hover{text-decoration:none; color:#666;}
 
 .glyphicon-home{
-  color:white; 
+  color: lightgray; 
   font-size:1.5em; 
   margin-top:5px; 
   margin:0 auto;
@@ -195,7 +195,7 @@ header{
 
 .pasture {
   height: 35rem;
-  background-image: url("http://i.imgur.com/KknFrY7.jpg");
+  /* background-image: url("http://i.imgur.com/KknFrY7.jpg"); */
 }
 
 .paragraph {
@@ -203,15 +203,15 @@ header{
   height: 25rem;
   margin-left: 17.5rem;
   margin-bottom: -12rem;
-  padding-top: 5rem;
+  padding-top: 7rem;
 }
 
 p {
   font-family: 'Pacifico', cursive;
-  color: white;
+  color: #258BC4;
   text-align: center;
   font-size: 2rem;
-  text-shadow: 1.5px 1.5px #2093B0;
+  text-shadow: 1.5px 1.5px lightgray;
 }
 
 
@@ -221,7 +221,33 @@ p {
   float: right;
   margin-top: 6rem;
   margin-right: 5rem;
+  /* z-index: 10; */
   /* border: 1px solid yellow; */
+}
+
+.aboutSheep {
+  width: 10rem;
+  height: 10rem;
+  position: relative;
+  margin-left: 60rem;
+  margin-top: 16.5rem;
+}
+
+.fullscreen-bg {
+    position: absolute;
+    top: 16.3rem;
+    right: -1.5rem; 
+    left: -3rem; 
+    overflow: hidden;
+    z-index: -5;
+}
+
+.fullscreen-bg__video {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 110%;
+    height: 80%;
 }
 
 
