@@ -193,12 +193,35 @@ header{
   margin:0 auto;
 }
 
+.pasture {
+  height: 35rem;
+  background-image: url("http://i.imgur.com/KknFrY7.jpg");
+}
+
+.paragraph {
+  width: 45rem;
+  height: 25rem;
+  margin-left: 17.5rem;
+  margin-bottom: -12rem;
+  padding-top: 5rem;
+}
+
+p {
+  font-family: 'Pacifico', cursive;
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+  text-shadow: 1.5px 1.5px #2093B0;
+}
+
+
 .sheep {
   width: 10rem;
   height: 10rem;
   float: right;
   margin-top: 6rem;
   margin-right: 5rem;
+  /* border: 1px solid yellow; */
 }
 
 
