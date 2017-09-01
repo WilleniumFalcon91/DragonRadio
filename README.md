@@ -43,4 +43,6 @@ Electron
 Hindsight
 
 We learned that Electron is optimized for frameworks/libraries like Angular or React
-and it not easily compatiible with templating languages like Handlebars
+and it not easily compatiible with templating languages like Handlebars. 
+
+No live demo due to the nature or electron being a desktop applicaiton. 
