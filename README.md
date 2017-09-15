@@ -4,19 +4,17 @@ Keeping you up to date with the newest and most popular music,
 YaHerd helps you discover music and share with others. 
 We believe in coming together and sharing good tunes. Welcome to the herd!
 
-#Recording 
+# Recording 
 
-<video width="300" height="200" controls>
-    <source src="yaherd.mp4" type="video/mp4">
-</video>
+https://youtu.be/BOvTq_YdJMs
 
-Features
+# Features
 
 Music discovery and sampling pulling from the Napster API 
 
 Global chat appliation built in for users to discuss and enjoy music. 
 
-Stretch Goals
+# Stretch Goals
 
 Individual chat groups/rooms called 'Herds'
 
@@ -24,7 +22,7 @@ Full-length songs
 
 Ability to create your own playlists 
 
-Tools
+# Tools
 
 HTML
 
@@ -39,13 +37,14 @@ PostgreSQL
 
 JQuery
 
-Technologies / APIs
+# Technologies / APIs
+
 Napster API
 Feathers.js
 Handlebars.js
 Electron
 
-Hindsight
+# Hindsight
 
 We learned that Electron is optimized for frameworks/libraries like Angular or React
 and it not easily compatiible with templating languages like Handlebars. 
