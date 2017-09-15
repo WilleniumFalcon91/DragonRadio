@@ -4,6 +4,11 @@ Keeping you up to date with the newest and most popular music,
 YaHerd helps you discover music and share with others. 
 We believe in coming together and sharing good tunes. Welcome to the herd!
 
+#Recording 
+
+<video width="300" height="200" controls>
+    <source src="yaherd.mp4" type="video/mp4">
+</video>
 
 Features
 
